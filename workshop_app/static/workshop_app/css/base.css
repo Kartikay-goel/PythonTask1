@@ -1,19 +1,161 @@
-/**
- * Footer Styles
+/*
+ * base.css - A universal stylesheet for the entire site.
+ * It defines the site's chrome (body, navbar, footer) but leaves
+ * page-specific layouts to the individual HTML templates.
+ */
+
+body {
+    background-color: #f8f9fa; /* A very light gray background */
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    color: #343a40;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Base padding for desktops */
+}
+
+/*
+ * Navigation Bar
  */
 .navbar {
-    z-index: 1000;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-.footer {
-    position: fixed;
-    bottom: 0;
+
+.navbar-brand, .nav-link {
+    font-weight: 600;
+    color: #495057 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+/*
+ * Main Content Wrapper
+ */
+.main-content {
+    flex: 1; /* This makes the content area fill the available space */
+    padding: 2em; /* Consistent padding on all pages */
+}
+
+
+/*
+ * Card Component
+ */
+.card {
+    border: 1px solid #e9ecef;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    padding: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #212529;
+    margin-bottom: 1.5rem;
+}
+
+/*
+ * Form Elements
+ */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
     width: 100%;
-    background-color: #61615F;
-    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/*
+ * Links and Text
+ */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+hr {
+    border-top: 1px solid #e9ecef;
+}
+
+/*
+ * Footer
+ */
+.footer {
+    background-color: #ffffff;
+    color: #6c757d;
     text-align: center;
+    padding: 1.25rem 0;
+    border-top: 1px solid #e9ecef;
     z-index: 100;
 }
-.base-content {
-    padding-top: 5em;
-    padding-bottom: 5em;
+
+/*
+ * Media Queries for Mobile Responsiveness
+ * Adjust styles for screens smaller than 768px (common mobile breakpoint)
+ */
+@media (max-width: 767.98px) {
+    body {
+        /* Reduce padding at the top for smaller navbars on mobile */
+        padding-top: 56px; 
+    }
+
+    .main-content {
+        /* Reduce overall page padding on mobile to save space */
+        padding: 1em;
+    }
+
+    .card {
+        /* Reduce card padding on mobile to make content more compact */
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        /* Adjust font size for better readability on smaller screens */
+        font-size: 1.5rem;
+    }
 }

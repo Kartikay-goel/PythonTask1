@@ -1,0 +1,73 @@
+/*
+ * Full CSS for the "Workshop Statistics" page.
+ * This code is designed to improve the layout and responsiveness
+ * without major changes to the existing HTML structure.
+ */
+
+/* * Apply basic padding to the main container for better spacing.
+ */
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*
+ * Use a Flexbox container to manage the layout of the filters and table.
+ * This is a modern approach that provides better control than
+ * the older Bootstrap grid system.
+ */
+.workshop-stats-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+/* * Style the columns to ensure they are well-spaced and organized.
+ * These styles will apply to both the filters and the table.
+ */
+.workshop-stats-wrapper .col-md-6 {
+    /* Add margin to separate the filter section from the table */
+    margin-bottom: 20px;
+}
+.btn-clear {
+    background-color: #dc3545; /* A standard red color */
+    border-color: #dc3545;
+    color: white;
+    border-radius: 15px ;
+    
+}
+.btn-clear:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+/*
+ * Ensure the table is responsive and horizontally scrollable on small screens.
+ */
+.table-responsive {
+    overflow-x: auto;
+}
+
+
+.filters-section,
+.table-section,
+.chart-section {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* * On smaller screens, make the columns stack vertically.
+ */
+@media (max-width: 768px) {
+    .workshop-stats-wrapper {
+        flex-direction: column;
+    }
+
+    .workshop-stats-wrapper .col-md-6 {
+        width: 100%; /* Make each column full-width */
+        margin-bottom: 15px;
+    }
+}
