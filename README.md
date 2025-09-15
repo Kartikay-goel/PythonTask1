@@ -108,10 +108,10 @@ The Approach: The solution was to stop treating base.css as a layout file and st
 
 ### Visual Showcase:
 
-Before - 
-![Before Screenshot of my project](https://raw.githubusercontent.com/Kartikay-goel/PythonTask1/refs/heads/master/ss1.jpg)
+Before -
+![Before Screenshot of my project](https://raw.githubusercontent.com/Kartikay-goel/PythonTask1/master/ss1.jpg)
 
-After- 
-![After Screenshot of my project](https://raw.githubusercontent.com/Kartikay-goel/PythonTask1/refs/heads/master/ss2.jpg)
-![After Screenshot of my project](https://raw.githubusercontent.com/Kartikay-goel/PythonTask1/refs/heads/master/ss3.jpg)
+After -
+![After Screenshot of my project](https://raw.githubusercontent.com/Kartikay-goel/PythonTask1/master/ss2.jpg)
+![After Screenshot of my project](https://raw.githubusercontent.com/Kartikay-goel/PythonTask1/master/ss3.jpg)
 
